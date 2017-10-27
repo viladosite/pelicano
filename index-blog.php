@@ -1,3 +1,4 @@
+
 <!-- wallstreet Blog Section ---->
 <?php $wallstreet_pro_options=theme_data_setup();
 	  $current_options = wp_parse_args(  get_option( 'wallstreet_pro_options', array() ), $wallstreet_pro_options );
@@ -6,7 +7,7 @@
 	<div class="row">
 		<div class="section_heading_title">
 		<?php if($current_options['home_blog_heading']) { ?>
-			<h1><?php echo $current_options['home_blog_heading']; ?></h1>
+			<h1>Nossos Trabalhos</h1>
 		<?php } ?>
 		<?php if($current_options['home_blog_description']) { ?>
 			<div class="pagetitle-separator">
@@ -14,14 +15,15 @@
 					<div class="pagetitle-separator-box"></div>
 				</div>
 			</div>
-			<p><?php echo $current_options['home_blog_description']; ?></p>
+			<p>Conheça alguns dos nossos últimos trabalhos.</p>
 		<?php } ?>
 		</div>
 	</div>
 	<div class="row">
 		<?php
 		$j=1;
-		$args = array( 'post_type' => 'post','posts_per_page' =>3,'post__not_in'=>get_option("sticky_posts")); 	
+
+		$args = array( 'cat' =>11, 'post_type' => 'post','posts_per_page' =>3,'post__not_in'=>get_option("sticky_posts")); 	
 		query_posts( $args );
 		if(query_posts( $args ))
 		{	while(have_posts()):the_post();
@@ -78,11 +80,8 @@
 	<div class="row">
 		<?php
 		$j=1;
-
-		$my_query = new WP_Query( "cat=11" );
-
-		$args = array( 'post_type' => 'post','posts_per_page' =>3,'post__not_in'=>get_option("sticky_posts")); 	
-		query_posts( $args, $my_query );
+		$args = array( 'cat' =>-11, 'post_type' => 'post','posts_per_page' =>3,'post__not_in'=>get_option("sticky_posts")); 	
+		query_posts( $args );
 		if(query_posts( $args ))
 		{	while(have_posts()):the_post();
 			$recent_expet = get_the_excerpt(); ?>

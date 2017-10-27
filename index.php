@@ -59,7 +59,7 @@
 								<i class="fa fa-tags"></i><?php the_tags('', ', ', ''); ?>
 							</div>
 							<?php } ?>
-							<?php 	$cat_list = get_the_category_list('11');
+							<?php 	$cat_list = get_the_category_list('');
 							if(!empty($cat_list)) { ?>
 							<div class="blog-tags">
 								<i class="fa fa-star"></i><?php the_category(', '); ?>
