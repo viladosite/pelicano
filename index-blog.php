@@ -23,7 +23,7 @@
 		<?php
 		$j=1;
 
-		$args = array( 'cat' =>11, 'post_type' => 'post','posts_per_page' =>3,'post__not_in'=>get_option("sticky_posts")); 	
+		$args = array( 'category_name' => 'portfolio', 'post_type' => 'post','posts_per_page' =>3,'post__not_in'=>get_option("sticky_posts")); 	
 		query_posts( $args );
 		if(query_posts( $args ))
 		{	while(have_posts()):the_post();
@@ -40,12 +40,12 @@
 					<div class="home-blog-info">						
 						<div class="home-blog-post-detail">
 							<span class="date"><?php echo get_the_date(); ?> </span>
-							<span class="comment"><a href="<?php the_permalink(); ?>"><i class="fa fa-comment"></i><?php comments_number( 'No Comments', '1 comments', '% comments' ); ?></a></span>
+							<span class="comment"><a href="<?php the_permalink(); ?>"><i class="fa fa-comment"></i><?php comments_number( 'Nenhum Comentario', '1 Comentario', '% Comentarios' ); ?></a></span>
 												
 						</div>
 						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>		
 						<div class="home-blog-description"><p><?php echo get_the_excerpt(); ?></p></div>
-						<div class="home-blog-btn"><a href="<?php the_permalink(); ?>"><?php _e('Read More','wallstreet'); ?></a></div>							
+						<div class="home-blog-btn"><a href="<?php the_permalink(); ?>"><?php _e('Leia Mais','wallstreet'); ?></a></div>							
 					</div>
 				</div>
 			</div>
@@ -97,12 +97,12 @@
 					<div class="home-blog-info">						
 						<div class="home-blog-post-detail">
 							<span class="date"><?php echo get_the_date(); ?> </span>
-							<span class="comment"><a href="<?php the_permalink(); ?>"><i class="fa fa-comment"></i><?php comments_number( 'No Comments', '1 comments', '% comments' ); ?></a></span>
+							<span class="comment"><a href="<?php the_permalink(); ?>"><i class="fa fa-comment"></i><?php comments_number( 'Nenhum Comentario', '1 Comentario', '% Comentarios' ); ?></a></span>
 												
 						</div>
 						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>		
 						<div class="home-blog-description"><p><?php echo get_the_excerpt(); ?></p></div>
-						<div class="home-blog-btn"><a href="<?php the_permalink(); ?>"><?php _e('Read More','wallstreet'); ?></a></div>							
+						<div class="home-blog-btn"><a href="<?php the_permalink(); ?>"><?php _e('Leia Mais','wallstreet'); ?></a></div>							
 					</div>
 				</div>
 			</div>

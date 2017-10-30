@@ -44,13 +44,13 @@
 			$defaults = array(
 			'fields'=> apply_filters( 'comment_form_default_fields', $fields ),
 			'comment_field'=> '<div class="blog-form-group-textarea" >
-			<textarea id="comments" rows="5" class="blog-form-control-textarea" name="comment" type="text" placeholder="'.__('Leave your message','wallstreet').'"></textarea></div>',		
-			'logged_in_as' => '<p class="logged-in-as">' . __("Logged in as",'wallstreet' ).'<a href="'. admin_url( 'profile.php' ).'">'.$user_identity.'</a>'. '<a href="'. wp_logout_url( get_permalink() ).'" title="'.__('Log out from this Account','wallstreet').'">'.__("Logout",'wallstreet').'</a>' . '</p>',
+			<textarea id="comments" rows="5" class="blog-form-control-textarea" name="comment" type="text" placeholder="'.__('Deixe seu comentário','wallstreet').'"></textarea></div>',		
+			'logged_in_as' => '<p class="logged-in-as">' . __("Logado como ",'wallstreet' ).'<a href="'. admin_url( 'profile.php' ).'">'.$user_identity.'</a>'. '<a href="'. wp_logout_url( get_permalink() ).'" title="'.__('Log out from this Account','wallstreet').'">'.__(" Logout",'wallstreet').'</a>' . '</p>',
 			'id_submit'=> 'blogdetail_btn',
-			'label_submit'=>__('Send Message','wallstreet'),
+			'label_submit'=>__('Enviar','wallstreet'),
 			'comment_notes_after'=> '',
 			'comment_notes_before' => '',
-			'title_reply'=> '<div class="comment-title"><h3><i class="fa fa-comment-o"></i>'.__('Leave your message','wallstreet').'</h3></div>',
+			'title_reply'=> '<div class="comment-title"><h3><i class="fa fa-comment-o"></i>'.__('Deixe seu comentário','wallstreet').'</h3></div>',
 			'id_form'=> 'commentform'
 			);
 		comment_form($defaults);
