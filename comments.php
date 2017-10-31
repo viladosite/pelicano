@@ -34,7 +34,7 @@
 <div class="comment-form-section">
 	<?php  
 	 $fields=array(
-		'author' => '<div class="blog-form-group"><input class="blog-form-control" name="author" id="author" value="" type="name" placeholder="'.__('Name','wallstreet').'" /></div>',
+		'author' => '<div class="blog-form-group"><input class="blog-form-control" name="author" id="author" value="" type="name" placeholder="'.__('Nome','wallstreet').'" /></div>',
 		'email' => '<div class="blog-form-group"><input class="blog-form-control" name="email" id="email" value="" type="email" placeholder="'.__('Email','wallstreet').'" /></div>',
 		);
 		function my_fields($fields) { 

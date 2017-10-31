@@ -44,8 +44,7 @@
 												
 						</div>
 						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>		
-						<div class="home-blog-description"><p><?php echo get_the_excerpt(); ?></p></div>
-						<div class="home-blog-btn"><a href="<?php the_permalink(); ?>"><?php _e('Leia Mais','wallstreet'); ?></a></div>							
+												
 					</div>
 				</div>
 			</div>
