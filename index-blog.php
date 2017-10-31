@@ -30,6 +30,7 @@
 			$recent_expet = get_the_excerpt(); ?>
 			<div class="col-md-4 col-sm-6">
 				<div class="home-blog-area">
+					<a href="<?php the_permalink(); ?>">
 					<div class="home-blog-post-img"><?php
 						$defalt_arg =array('class' => "img-responsive");
 						if(has_post_thumbnail()): 
@@ -38,14 +39,10 @@
 						?>
 					</div>
 					<div class="home-blog-info">						
-						<div class="home-blog-post-detail">
-							<span class="date"><?php echo get_the_date(); ?> </span>
-							<span class="comment"><a href="<?php the_permalink(); ?>"><i class="fa fa-comment"></i><?php comments_number( 'Nenhum Comentario', '1 Comentario', '% Comentarios' ); ?></a></span>
-												
-						</div>
-						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>		
+						<h2 class="ht-blog"><?php the_title(); ?></h2>		
 												
 					</div>
+					</a>
 				</div>
 			</div>
 			<?php if($j%3==0){ echo "<div class='clearfix'></div>"; } $j++; endwhile; 
@@ -88,6 +85,7 @@
 			$recent_expet = get_the_excerpt(); ?>
 			<div class="col-md-4 col-sm-6">
 				<div class="home-blog-area">
+					<a href="<?php the_permalink(); ?>">
 					<div class="home-blog-post-img"><?php
 						$defalt_arg =array('class' => "img-responsive");
 						if(has_post_thumbnail()): 
@@ -98,13 +96,14 @@
 					<div class="home-blog-info">						
 						<div class="home-blog-post-detail">
 							<span class="date"><?php echo get_the_date(); ?> </span>
-							<span class="comment"><a href="<?php the_permalink(); ?>"><i class="fa fa-comment"></i><?php comments_number( 'Nenhum Comentario', '1 Comentario', '% Comentarios' ); ?></a></span>
+							<span class="comment"><i class="fa fa-comment"></i><?php comments_number( 'Nenhum Comentario', '1 Comentario', '% Comentarios' ); ?></span>
 												
 						</div>
-						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>		
+						<h2 class="ht-blog"><?php the_title(); ?></h2>		
 						<div class="home-blog-description"><p><?php echo get_the_excerpt(); ?></p></div>
-						<div class="home-blog-btn"><a href="<?php the_permalink(); ?>"><?php _e('Leia Mais','wallstreet'); ?></a></div>							
+						<div class="home-blog-btn"><?php _e('Leia Mais','wallstreet'); ?></div>							
 					</div>
+					</a>
 				</div>
 			</div>
 			<?php if($j%3==0){ echo "<div class='clearfix'></div>"; } $j++; endwhile; 
