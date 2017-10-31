@@ -80,7 +80,9 @@
 	<div class="row">
 		<?php
 		$j=1;
-		$args = array( 'cat' =>-11, 'post_type' => 'post','posts_per_page' =>3,'post__not_in'=>get_option("sticky_posts")); 	
+		$idObj = get_category_by_slug('portfolio'); 
+  		$id = $idObj->term_id;
+		$args = array( 'cat' =>-$id, 'post_type' => 'post','posts_per_page' =>3,'post__not_in'=>get_option("sticky_posts")); 	
 		query_posts( $args );
 		if(query_posts( $args ))
 		{	while(have_posts()):the_post();
