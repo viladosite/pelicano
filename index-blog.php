@@ -50,6 +50,14 @@
 			echo "<div class='post_message'>No Posts to show.</div>";
 			} ?>
 	</div>
+	
+		<?php $idObj = get_category_by_slug('portfolio');
+		$id = $idObj->term_id;
+		$link_da_categoria = get_category_link($id); ?>
+		<div class="col-md-4 produto4 col-md-offset-4">
+		<a href="<?php echo $link_da_categoria ;?>"> <button type="button" class="btn btn-primary btn-ver">Ver todos os trabalhos</button> </a>
+		</div>
+
 </div><!-- /wallstreet Blog Section ---->
 <?php } ?>
 
@@ -73,6 +81,7 @@
 		<?php } ?>
 		</div>
 	</div>
+
 	<div class="row">
 		<?php
 		$j=1;
@@ -101,15 +110,23 @@
 						</div>
 						<h2 class="ht-blog"><?php the_title(); ?></h2>		
 						<div class="home-blog-description"><p><?php echo get_the_excerpt(); ?></p></div>
-						<div class="home-blog-btn"><?php _e('Leia Mais','wallstreet'); ?></div>							
+						<div class="home-blog-btn"><?php _e('Leia Mais','wallstreet'); ?></div>	
 					</div>
 					</a>
-				</div>
+				</div>	
 			</div>
 			<?php if($j%3==0){ echo "<div class='clearfix'></div>"; } $j++; endwhile; 
 			} else  {
 			echo "<div class='post_message'>No Posts to show.</div>";
 			} ?>
 	</div>
+
+		<?php $idObj = get_category_by_slug('noticias');
+		$id = $idObj->term_id;
+		$link_da_categoria = get_category_link($id); ?>
+		<div class="col-md-4 produto4 col-md-offset-4">
+		<a href="<?php echo $link_da_categoria ;?>"> <button type="button" class="btn btn-primary btn-ver">Ver todas as novidades</button> </a>
+		</div>
+
 </div><!-- /wallstreet Blog Section ---->
 <?php } ?>
