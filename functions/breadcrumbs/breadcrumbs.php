@@ -21,10 +21,10 @@ function webriti_custom_breadcrumbs() {
     if ( is_category() ) {
       $thisCat = get_category(get_query_var('cat'), false);
       if ($thisCat->parent != 0) echo get_category_parents($thisCat->parent, TRUE, ' ' . ' ');
-      echo $before . __('Archive by category','wallstreet') . single_cat_title('', false) . '"' . $after;
+      echo $before . __('','wallstreet') . single_cat_title('', false) . '' . $after;
  
     } elseif ( is_search() ) {
-      echo $before . __('Search results for','wallstreet'). get_search_query() . '"' . $after;
+      echo $before . __('Search results for','wallstreet'). get_search_query() . '' . $after;
  
     } elseif ( is_day() ) {
       echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . '&nbsp &#47; &nbsp';
