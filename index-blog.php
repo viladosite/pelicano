@@ -33,9 +33,11 @@
 					<a href="<?php the_permalink(); ?>">
 					<div class="home-blog-post-img"><?php
 						$defalt_arg =array('class' => "img-responsive");
-						if(has_post_thumbnail()): 
+						if(has_post_thumbnail()){ 
 						the_post_thumbnail('', $defalt_arg); 
-						endif; 
+						} else{
+							echo " <img class=\"image-tb\" src=\"", bloginfo('template_url'), "/images/sem-imagem.jpg\" alt=\"Descrição da imagem - com ", the_author('', false), "\"> ";
+						} 
 						?>
 					</div>
 					<div class="home-blog-info">						
@@ -64,8 +66,9 @@
 <!-- wallstreet Blog Section ---->
 <?php $wallstreet_pro_options=theme_data_setup();
 	  $current_options = wp_parse_args(  get_option( 'wallstreet_pro_options', array() ), $wallstreet_pro_options );
- if($current_options['blog_section_enabled'] == true) { ?>	
-<div class="container home-blog-section">
+ if($current_options['blog_section_enabled'] == true) { ?>
+ <hr class="cat-hr">	
+<div class="container home-blog-section section-2">
 	<div class="row">
 		<div class="section_heading_title">
 		<?php if($current_options['home_blog_heading']) { ?>
