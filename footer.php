@@ -12,7 +12,7 @@
 					<li><a href="<?php echo esc_url( $current_options['social_media_facebook_link']); ?>"><i class="fa fa-facebook"></i></a></li>
 					<?php }					
 					if($current_options['social_media_googleplus_link']!='') { ?>
-					<li><a href="<?php echo esc_url( $current_options['social_media_googleplus_link']); ?>"><i class="fa fa-google-plus"></i></a></li>
+					<li><a href="<?php echo esc_url( $current_options['social_media_googleplus_link']); ?>"><i class="fa fa-instagram"></i></a></li>
 					<?php }
 					if($current_options['social_media_linkedin_link']!='') { ?>
 					<li><a href="<?php echo esc_url( $current_options['social_media_linkedin_link']); ?>"><i class="fa fa-linkedin"></i></a></li>

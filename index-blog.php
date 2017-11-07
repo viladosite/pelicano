@@ -3,6 +3,7 @@
 <?php $wallstreet_pro_options=theme_data_setup();
 	  $current_options = wp_parse_args(  get_option( 'wallstreet_pro_options', array() ), $wallstreet_pro_options );
  if($current_options['blog_section_enabled'] == true) { ?>	
+ <hr class="cat-hr">
 <div class="container home-blog-section">
 	<div class="row">
 		<div class="section_heading_title">
@@ -57,7 +58,7 @@
 		$id = $idObj->term_id;
 		$link_da_categoria = get_category_link($id); ?>
 		<div class="col-md-4 produto4 col-md-offset-4">
-		<a href="<?php echo $link_da_categoria ;?>"> <button type="button" class="btn btn-primary btn-ver">Ver todos os trabalhos</button> </a>
+		<button type="button" class="btn btn-primary btn-ver"><a href="<?php echo $link_da_categoria ;?>"> Ver todos os trabalhos </a></button>
 		</div>
 
 </div><!-- /wallstreet Blog Section ---->
@@ -128,7 +129,7 @@
 		$id = $idObj->term_id;
 		$link_da_categoria = get_category_link($id); ?>
 		<div class="col-md-4 produto4 col-md-offset-4">
-		<a href="<?php echo $link_da_categoria ;?>"> <button type="button" class="btn btn-primary btn-ver">Ver todas as novidades</button> </a>
+		<button type="button" class="btn btn-primary btn-ver"><a href="<?php echo $link_da_categoria ;?>"> Ver todas as novidades </a></button>
 		</div>
 
 </div><!-- /wallstreet Blog Section ---->

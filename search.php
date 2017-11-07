@@ -29,7 +29,7 @@
 		<div class="col-md-8">
 			<?php if ( have_posts() ) { ?>
 				<h1 class="search_heading">
-				<?php printf( __("Search results for: %s", 'wallstreet' ), '<span>' . get_search_query() . '</span>' ); ?>
+				<?php printf( __("Encontrado resultados para: %s", 'wallstreet' ), '<span>' . get_search_query() . '</span>' ); ?>
 				</h1>
 			<?php while ( have_posts() ) { the_post();  ?>
 			<div id="post-<?php the_ID(); ?>" <?php post_class('blog-section-right'); ?>>
@@ -62,14 +62,14 @@
 			</div>
 			<?php } ?>
 			<div class="blog-pagination">
-				<?php next_posts_link( __('Previous','wallstreet') ); ?>
-				<?php previous_posts_link( __('Next','wallstreet') ); ?>
+				<?php next_posts_link( __('Anterior','wallstreet') ); ?>
+				<?php previous_posts_link( __('Proximo','wallstreet') ); ?>
 			</div>
 			<?php } else { ?>
 				<div class="search_error">
-				<div class="search_err_heading"><h2><?php _e( "Nothing Found","wallstreet"); ?></h2> </div>
+				<div class="search_err_heading"><h2><?php _e( "Nada foi Encontrado","wallstreet"); ?></h2> </div>
 				<div class="wallstreet_searching">
-				<p><?php _e( "Sorry, but nothing matched your search criteria. Please try again with some different keywords.","wallstreet"); ?></p>
+				<p><?php _e( "Desculpe, mas sua busca não retornou nenhum resultado. Tente novamente.","wallstreet"); ?></p>
 				</div>	
 					
 				</div>

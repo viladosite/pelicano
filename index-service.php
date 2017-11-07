@@ -67,8 +67,13 @@
 			<?php } ?>
 			</div><!-- / service-area -->
 		</div> <!-- / service-effect column -->
-		
+
 	</div>	
+
+		<div class="col-md-4 produto4 col-md-offset-4">
+		<button type="button" class="btn btn-primary btn-ver"><a href="v1/servicos"> Ver todos os serviços </a></button>
+		</div>
+
 </div>
 </div>
 <?php } ?>
